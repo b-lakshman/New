@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- side navbar -->
+    <div id="mySidenav" class="sidenav">
+        <div class="logo"></div>
+        <div class="side_tabs">
+                <a href="#">
+                    <div>
+                    <img src="img/icon_home.svg" alt="home button">
+                    </div>
+                    <div>Home</div>
+                </a>
+            <a href="#" style="background-color:#3C3B54"><img src="img/icon_dashboard.svg" alt="home button">Dashboard</a>
+            <a href="#">
+                <div style="display:flex;
+                ">
+                <img src="img/icon_inbox.svg" alt="home button">
+                <div style="padding-right:80px;">Inbox</div>
+                <div class="new" style="text-align:center;">
+                    <div>new</div>
+                </div>
+                    </div>
+            </a>
+            <a href="#"><img src="img/icon_products.svg" alt="home button">Products</a>
+            <a href="#"><img src="img/icon_admin.svg" alt="home button">Admin</a>
+        </div>
+      </div>
+      
+    <div id="main" class="main">      
+
+            <!-- header -->
+            <header>
+                <div class="left_side_navigation">
+                <a href="#">
+                    <div class="menu" onclick="openNav()">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="search_icon">
+                    </div>
+                </a>
+                <a href="#">
+                        <p class="search-text">Search transactions, invoices or help</p>
+                </a>
+                </div>
+                <div class="right_side_navigation">
+                        <a href="#" class="mobile-search-icon">
+                            <div class="search_icon">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="notification_navtag">
+                                <div class="notification_icon"  onclick="notification_drop()"></div>
+                                <div class="notification_dropdown" id="noti" >
+                                    <div class="notification_navbutton">
+                                    <a href="#" style="display:flex; justify-content: space-between;align-items: center;">
+                                        <div style="display:flex; justify-content: space-between; align-items: center;">
+                                            <img src="img/profile-pic 3.png" alt="">
+                                            <div class="notification-user-name" style="padding-left:25px;">
+                                                <h1>Bavid Kames</h1>
+                                                <p>Assigned you on the call with Sara</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </a>
+                                    </div>
+                                    <div class="notification_navbutton">
+                                        <a href="#" style="display:flex; justify-content: space-between; align-items: center;">
+                                            <div style="display:flex; justify-content: space-between; align-items: center;">
+                                                <img src="img/profile-pic 2.png" alt="">
+                                                <div class="notification-user-name" style="padding-left:25px;">
+                                                    <h1>Bavid Kames</h1>
+                                                    <p>Marked the task <span>New UI</span> as done</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p>2 min ago</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="notification_navbutton">
+                                        <a href="#" style="display:flex; justify-content: space-between;align-items: center;">
+                                            <div style="display:flex; justify-content: space-between;align-items: center;">
+                                                <img src="img/profile-pic 3.png" alt="">
+                                                <div class="notification-user-name" style="padding-left:25px;">
+                                                    <h1>Bavid Kames</h1>
+                                                    <p>Assigned you on the call with Sara</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p>2 min ago</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="notification_navbutton">
+                                        <a href="#" style="display:flex; justify-content: space-between;align-items: center;">
+                                            <div class="see_more" style="display:flex; justify-content: space-between;align-items: center;">
+                                                <p style="font: normal normal normal 14px/20px Source Sans Pro;
+                                                letter-spacing: 0px;
+                                                color: #3B86FF;
+                                                opacity: 1;">see more</p>
+                                    </div>
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                        </a>
+                        <a href="#" class="profile-navbutton">
+                        <div class="all" onclick="dropdow()">
+                            <div class="profile">
+                                <p>John Doe</p>
+                                <div class="drop_down_arrow" id="drop_down_arrow">
+                                </div>
+                                <div class="profile_pic"></div>
+                            </div>
+                            <div class="dropdown" id="dropdown">
+                                <div class="navbutton">
+                                <a href="#">
+                                    <div class="navdrop">
+                                        <div class="dropprofile">
+                                        </div>
+                                        <div>
+                                            My profile
+                                        </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="navbutton">
+                                <a href="#">
+                                    <div class="navdrop">
+                                        <div class="dropbilling">
+                                        </div>
+                                        <div>Billing</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="navbutton">
+                                <a href="#"> <div class="navdrop">
+                                    <div class="droplogout">
+                                </div>
+                                <div>Logout</div>
+                            </div></a>
+                            </div>
+                            </div>
+                        </div>
+                        </a>
+                </div>
+            </header>
+            <div class="overview">
+                <!-- <div class="overview1"> -->
+                <p>Overview</p>
+                <!-- </div> -->
+                <div class="button">
+                    <p>Add Funds</p>
+                    <div class="plus">
+                        <img src="img/plus.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="grid-container">
+                    <div class="grid-item item-mobile item-1">
+                    <div class="item-1-text">
+                        <p>Statistics</p>
+                        <div style="display: flex;">
+                        <p>Last 6 months</p>
+                        <img src="img/small-down.svg" alt="">
+                        </div>
+                    </div>
+                        <canvas id="lineChart" style="max-width: 555px;
+                        height:270px;"></canvas>
+                    </div>
+                    <div class="grid-item item-mobile item-2">
+                        <p>Sales Distribution</p>
+                        <h1>230,900 Sales</h1>
+                        <div class="donut">
+                            <canvas id="doughnutChart" style="max-width:350px; max-height:300px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-item item-mobile item-3">
+                        <div class="upper-profile">
+                            <div class="profile_div">
+                                <img src="img/profile.png" alt="profile pic"></img>
+                                 <div class="edit_icon" >
+                                <img src="img/edit.svg" alt="edit icon">
+                            </div>
+                            </div>
+                            <h1>Nick Herasimenka</h1>
+                            <p>United States</p>
+                            <div class="icons">
+                                <div class="twitter icon"></div>
+                                <div class="facebook icon"></div>
+                                <div class="linkedin icon"></div>
+                                <div class="whatsapp icon"></div>
+                            </div>
+                        </div>
+                        <div class="lower-profile">
+                        <div class="our-users">   
+                            <p>Our Users</p>
+                            <img src="img/options.svg" alt="option">
+                        </div>
+                        <div class="users-profile">
+                            <div class="user">
+                                <div class="left">
+                                    <img src="img/profile-pic-03.jpg" alt="">
+                                    <div class="user-name">
+                                        <h1>Drew James</h1>
+                                        <p>United States</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Mobile : 8715674877</p>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <div class="left">
+                                    <img src="img/profile-pic-04.jpg" alt="">
+                                    <div class="user-name">
+                                        <h1>Bavid Kames</h1>
+                                        <p>United States</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Mobile : 8715674877</p>
+                                </div>
+                            </div>
+                            <div class="user">
+                                <div class="left">
+                                    <img src="img/profile-pic-02.jpg" alt="">
+                                    <div class="user-name">
+                                        <h1>Lavid Emes</h1>
+                                        <p>United States</p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <p>Mobile : 8715674877</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="grid-item item-mobile item-4">
+                        <p>Referrer</p>
+                        <div class="search-table-outter">
+                            <table>
+                                <tr>
+                                  <th>Location</th>
+                                  <th>Views</th>
+                                  <th>Sales</th>
+                                  <th>Conversion</th>
+                                  <th>Total</th>
+                                </tr>
+                                <tr>
+                                  <td>google.com</td>
+                                  <td>3746</td>
+                                  <td>752</td>
+                                  <td>43%</td>
+                                  <td>$19,291</td>
+                                </tr>
+                                <tr>
+                                  <td>twitter.com</td>
+                                  <td>8126</td>
+                                  <td>728</td>
+                                  <td>32%</td>
+                                  <td>$16218</td>
+                                </tr>
+                                <tr>
+                                  <td>Direct, email, IM</td>
+                                  <td>8836</td>
+                                  <td>645</td>
+                                  <td>28%</td>
+                                  <td>$14421</td>
+                                </tr>
+                                <tr>
+                                  <td>linkedin.com</td>
+                                  <td>1173</td>
+                                  <td>539</td>
+                                  <td>20%</td>
+                                  <td>$12370</td>
+                                </tr>
+                                <tr>
+                                  <td>instagram.com</td>
+                                  <td>2739</td>
+                                  <td>539645</td>
+                                  <td>20%</td>
+                                  <td>$12370</td>
+                                </tr>
+                              </table>
+                            <div class="show-more">Show More</div>
+                        </div>
+                    </div>
+                    <div class="grid-item item-mobile item-5">
+                        <iframe width="100%" src="https://www.youtube.com/embed/Oy6hk6Y7VHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="jsquery.js"></script>
+</body>
+</html>
